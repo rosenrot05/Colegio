@@ -36,7 +36,7 @@ public class ColegioApp {
 
         // SOBRECARGA - buscar
         System.out.println("--- BUSQUEDA ---");
-        Profesor p1 = control.buscarProfesor("Carlos Perez");
+        Profesor p1 = control.buscarProfesor("Christian Villarreal");
         Profesor p2 = control.buscarProfesor(1);
         System.out.println("Buscar por nombre: " + (p1 != null ? p1.getNombre() : "No existe"));
         System.out.println("Buscar por indice: " + (p2 != null ? p2.getNombre() : "No existe"));
