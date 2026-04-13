@@ -11,12 +11,8 @@ public class Estudiante extends Persona {
     private String grado;
     private String acudiente;
 
-    public Estudiante(String nombre, String direccion, String telefono, String fechaNacimiento,
-                      String codigoEstudiante, String grado, String acudiente) {
+    public Estudiante(String nombre, String direccion, String telefono, String fechaNacimiento) {
         super(nombre, direccion, telefono, fechaNacimiento);
-        this.codigoEstudiante = codigoEstudiante;
-        this.grado = grado;
-        this.acudiente = acudiente;
     }
 
     public String getCodigoEstudiante() { return codigoEstudiante; }
@@ -28,7 +24,6 @@ public class Estudiante extends Persona {
     public String getAcudiente() { return acudiente; }
     public void setAcudiente(String acudiente) { this.acudiente = acudiente; }
 
-    // POLIMORFISMO: sobreescritura de getInfo()
     @Override
     public String getInfo() {
         return super.getInfo()

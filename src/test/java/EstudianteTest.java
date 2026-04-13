@@ -15,67 +15,67 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author rosam
  */
 public class EstudianteTest {
-        @Test
+    
+        private Estudiante crearEstudiante1() {
+        Estudiante e = new Estudiante("Paola Valenzuela", "Calle 3", "3154321098", "10/05/2010");
+        e.setCodigoEstudiante("EST001");
+        e.setGrado("9A");
+        e.setAcudiente("Carmen Gomez");
+        return e;
+    }
+
+    private Estudiante crearEstudiante2() {
+        Estudiante e = new Estudiante("Mercedes Escobar", "Cra 15", "3165432109", "18/09/2011");
+        e.setCodigoEstudiante("EST002");
+        e.setGrado("8B");
+        e.setAcudiente("Luis Ruiz");
+        return e;
+    }
+
+    @Test
     public void testNombreEstudiante1() {
-        Estudiante estudiante1 = new Estudiante("Paola Valenzuela", "Calle 3", "3154321098", "10/05/2010",
-                                                "EST001", "9A", "Carmen Gomez");
-        assertEquals("Paola Valenzuela", estudiante1.getNombre());
+        assertEquals("Paola Valenzuela", crearEstudiante1().getNombre());
     }
 
     @Test
     public void testNombreEstudiante2() {
-        Estudiante estudiante2 = new Estudiante("Mercedes Escobar", "Cra 15", "3165432109", "18/09/2011",
-                                                "EST002", "8B", "Luis Ruiz");
-        assertEquals("Mercedes Escobar", estudiante2.getNombre());
+        assertEquals("Mercedes Escobar", crearEstudiante2().getNombre());
     }
 
     @Test
     public void testCodigoEstudiante1() {
-        Estudiante estudiante1 = new Estudiante("Paola Valenzuela", "Calle 3", "3154321098", "10/05/2010",
-                                                "EST001", "9A", "Carmen Gomez");
-        assertEquals("EST001", estudiante1.getCodigoEstudiante());
+        assertEquals("EST001", crearEstudiante1().getCodigoEstudiante());
     }
 
     @Test
     public void testCodigoEstudiante2() {
-        Estudiante estudiante2 = new Estudiante("Mercedes Escobar", "Cra 15", "3165432109", "18/09/2011",
-                                                "EST002", "8B", "Luis Ruiz");
-        assertEquals("EST002", estudiante2.getCodigoEstudiante());
+        assertEquals("EST002", crearEstudiante2().getCodigoEstudiante());
     }
 
     @Test
     public void testGradoEstudiante1() {
-        Estudiante estudiante1 = new Estudiante("Paola Valenzuela", "Calle 3", "3154321098", "10/05/2010",
-                                                "EST001", "9A", "Carmen Gomez");
-        assertEquals("9A", estudiante1.getGrado());
+        assertEquals("9A", crearEstudiante1().getGrado());
     }
 
     @Test
     public void testGradoEstudiante2() {
-        Estudiante estudiante2 = new Estudiante("Mercedes Escobar", "Cra 15", "3165432109", "18/09/2011",
-                                                "EST002", "8B", "Luis Ruiz");
-        assertEquals("8B", estudiante2.getGrado());
+        assertEquals("8B", crearEstudiante2().getGrado());
     }
 
     @Test
     public void testAcudienteEstudiante1() {
-        Estudiante estudiante1 = new Estudiante("Paola Valenzuela", "Calle 3", "3154321098", "10/05/2010",
-                                                "EST001", "9A", "Carmen Gomez");
-        assertEquals("Carmen Gomez", estudiante1.getAcudiente());
+        assertEquals("Carmen Gomez", crearEstudiante1().getAcudiente());
     }
 
     @Test
     public void testAcudienteEstudiante2() {
-        Estudiante estudiante2 = new Estudiante("Mercedes Escobar", "Cra 15", "3165432109", "18/09/2011",
-                                                "EST002", "8B", "Luis Ruiz");
-        assertEquals("Luis Ruiz", estudiante2.getAcudiente());
+        assertEquals("Luis Ruiz", crearEstudiante2().getAcudiente());
     }
 
     @Test
     public void testSetGradoEstudiante() {
-        Estudiante estudiante1 = new Estudiante("Paola Valenzuela", "Calle 3", "3154321098", "10/05/2010",
-                                                "EST001", "9A", "Carmen Gomez");
-        estudiante1.setGrado("10A");
-        assertEquals("10A", estudiante1.getGrado());
+        Estudiante e = crearEstudiante1();
+        e.setGrado("10A");
+        assertEquals("10A", e.getGrado());
     }
 }

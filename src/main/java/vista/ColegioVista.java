@@ -376,6 +376,7 @@ public class ColegioVista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarProfesorActionPerformed
 
     private void btnRegistrarEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEstudianteActionPerformed
+    
     String nombre = txtNombreE.getText().trim();
     String dir    = txtDireccionE.getText().trim();
     String tel    = txtTelefonoE.getText().trim();
@@ -384,8 +385,14 @@ public class ColegioVista extends javax.swing.JFrame {
     String grado  = txtGrado.getText().trim();
     String acud   = txtAcudiente.getText().trim();
 
-control.registrar(new Estudiante(nombre, dir, tel, fec, cod, grado, acud));
-JOptionPane.showMessageDialog(this, "Estudiante registrado: " + nombre);
+    Estudiante e = new Estudiante(nombre, dir, tel, fec);
+    e.setCodigoEstudiante(cod);
+    e.setGrado(grado);
+    e.setAcudiente(acud);
+
+    control.registrar(e);
+    JOptionPane.showMessageDialog(this, "Estudiante registrado: " + nombre);
+
     }//GEN-LAST:event_btnRegistrarEstudianteActionPerformed
 
     private void btnReporteProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteProfesoresActionPerformed
